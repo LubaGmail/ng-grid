@@ -1,0 +1,61 @@
+<div>
+
+  <p>&nbsp;</p>
+
+  <!-- CARDS -->
+  <div *ngIf='!isDetail' class="container">
+      
+    <p>&nbsp;</p>
+    <div class="card-columns">
+
+      <!-- Single card -->
+      <div *ngFor="let c of cardModelArr; index as i;" class="card  shadow " style="max-width: 18rem; ">
+        <div class={{c.headerClass}}> 
+
+          <span style='float: left'>
+            <!-- {{c.icon}} -->
+          </span>
+
+          <h5>{{c.title}}</h5>
+        </div>
+
+        <div id={{c.htmlId}}>
+
+          <div class="card-body bg-white text-dark">
+            <p class="card-text">{{c.summary}}</p>
+          </div>
+
+          <div class='au-pill'>
+            <span class={{c.pillboxClass}}>{{c.items}}</span>
+          </div>
+
+          <div class={{c.footerClass}}>
+
+            <div>
+              <button (click)='loadCardData()' class='au-button-white'>Refresh</button>&nbsp;&nbsp;
+              <button (click)='onCLickDetail($event)' id={{c.title}} class='au-button-white'>Detail</button>
+         
+            </div>
+          </div>
+
+          <!-- single -->
+        </div>
+
+        <!-- ngFor -->
+      </div>
+
+      <!-- card-columns -->
+    </div>
+    <!-- container -->
+  </div>
+
+  <!-- PROCESSING -->
+  <div *ngIf='isProcessing'>
+    <app-processing (closeProcessing)='onCloseProcessing($event)'
+    ></app-processing>
+  </div>
+
+  
+
+
+

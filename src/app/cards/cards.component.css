@@ -1,0 +1,56 @@
+button:hover {
+  background-color: black;  
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.au-img-1 {
+  max-width: 30px;
+  /* position: absolute;
+    left: 5px;
+    top: -1px; */
+}
+
+.au-img-2 {
+  max-width: 40px;
+  /* position: absolute;
+    left: 10px;
+    top: 10px; */
+}
+
+.au-img-3 {
+  max-width: 25px;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+}
+
+.au-pill {
+  text-align: right;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  font-size: larger;
+}
+
+.au-footer {
+  font-size: small;
+  max-height: 5em;
+  padding: 0;
+}
+
+.au-button-white {
+  border: 2px solid white; 
+  border-radius: 12px;
+  background-color: transparent;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  margin: 5px;
+   -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
