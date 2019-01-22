@@ -17,6 +17,7 @@ export class CardsComponent implements OnInit, OnDestroy {
   cardModelArr: Card[] = [];
   isDetail = false;
   isProcessing: boolean;
+  isShipped: boolean;
 
   constructor(private cardService: CardDataService  ) {}
 
@@ -65,14 +66,25 @@ export class CardsComponent implements OnInit, OnDestroy {
 
   onCLickDetail(event) {
     const id = event.target.id;
-    console.log('cards.id ', id);
+
     if (id === 'Processing_Orders') {
       this.isDetail = true;
       this.isProcessing = true;
+      this.isShipped = false;
+    }
+    if (id === 'Shipped_Orders') {
+      this.isDetail = true;
+      this.isShipped = true;
+      this.isProcessing = false;
     }
   }
 
   onCloseProcessing(event) {
+    this.isDetail = false;
+    console.log('cards.event ', event);
+  }
+
+  onCloseShipped(event) {
     this.isDetail = false;
     console.log('cards.event ', event);
   }

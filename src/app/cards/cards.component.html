@@ -55,6 +55,12 @@
     ></app-processing>
   </div>
 
+  <!-- SHIPPED -->
+  <div *ngIf='isShipped'>
+      <app-shipped (closeShipped)='onCloseShipped($event)'
+      ></app-shipped>
+  </div>
+
   
 
 
